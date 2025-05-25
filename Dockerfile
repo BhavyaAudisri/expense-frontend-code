@@ -22,4 +22,5 @@ RUN touch /var/run/nginx.pid && \
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY code /usr/share/nginx/html/
 RUN apk upgrade
+RUN chmod -R 777 /var/cache/nginx
 USER nginx
